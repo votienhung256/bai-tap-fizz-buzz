@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz</title>
+</head>
+
+<body>
+    <h2>Nhập vào 2 số đầu và cuối khảng:</h2>
+    <input id="num1" type="number" oninput="ketQua()">
+    <input id="num2" type="number" oninput="ketQua()">
+    <h2>Các số Fizz Buzz là:</h2>
+    <code id="print"></code>
+    <script>
+        function ketQua() {
+            let a = Number(document.getElementById("num1").value)
+            let b = Number(document.getElementById("num2").value)
+            let s = ""
+            for (let i = a; i <= b; i++) {
+                if (i % 3 == 0) {
+                    s += "Fizz "
+                } else if (i % 5 == 0) {
+                    s += "Buzz "
+                } else {
+                    s += i + " "
+                }
+            }
+            document.getElementById("print").innerHTML = s
+        }
+    </script>
+</body>
+
+</html>
